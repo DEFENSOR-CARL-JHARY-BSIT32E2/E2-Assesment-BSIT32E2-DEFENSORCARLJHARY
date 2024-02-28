@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even/Odd Checker</title>
+    <script>
+        function checkEvenOrOdd(number) {
+            if (number % 2 === 0) {
+                return "Even";
+            } else {
+                return "Odd";
+            }
+        }
+
+        function displayResult() {
+            var inputNumber = document.getElementById("numberInput").value;
+            var result = checkEvenOrOdd(inputNumber);
+            document.getElementById("result").innerText = "The number is: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Even/Odd Checker</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="displayResult()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
